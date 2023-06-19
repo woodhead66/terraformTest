@@ -26,12 +26,6 @@ provider "alicloud" {
   region     = "cn-hangzhou"
 }
 
-# provider "alicloud" {
-#   access_key = "LTAI5t5da5kSEF8XqSrkH5vt"
-#   secret_key = "nR07v0aiKH2fJxurn1mPQgN8NQyTgG"
-#   region     = "cn-hangzhou"
-# }
-
 resource "alicloud_instance" "name" {
   image_id = "centos_7_9_x64_20G_alibase_20230516.vhd"
   security_groups = [
