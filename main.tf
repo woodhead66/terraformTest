@@ -21,8 +21,8 @@ terraform {
 }
 
 provider "alicloud" {
-  access_key = "LTAI5tG84zkQnVxu6y5Ks4vr"
-  secret_key = "xjvrtF7pNfrRKotng4Dn97FymasFzD"
+  access_key = ""
+  secret_key = ""
   region     = "cn-hangzhou"
 }
 
@@ -38,7 +38,7 @@ resource "alicloud_instance" "name" {
               "sg-bp181hhphvhyu0wchlj4"
             ]
   instance_type = "ecs.t6-c2m1.large" 
-  instance_name= "terraform-launch-test1"
+  instance_name= "terraform-launch-test"
   internet_max_bandwidth_out= 5 
   vswitch_id= "vsw-bp117ga2xk1dyfakk5vqg" 
   #auto_release_time= "2023-08-30T08:59Z"     
@@ -48,7 +48,7 @@ resource "alicloud_instance" "name" {
   system_disk_encrypted= false
   tags= {}
   system_disk_category= "cloud_essd"
-  spot_strategy= "SpotAsPriceGo"
+  #spot_strategy= "SpotAsPriceGo"
 }
 
 # resource "alicloud_security_group" "default" {
